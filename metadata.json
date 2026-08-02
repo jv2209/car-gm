@@ -1,0 +1,6 @@
+{
+  "name": "Neon Racer 2099",
+  "description": "A high-octane AAA-quality cyberpunk endless highway racing game with WebGL/Canvas graphics, synthwave audio synthesizer, dynamic weather, custom hover cars, and neon neon aesthetics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

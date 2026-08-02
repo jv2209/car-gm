@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-orbitron: 'Orbitron', sans-serif;
+    --font-rajdhani: 'Rajdhani', sans-serif;
+    --font-pixel: 'Press Start 2P', monospace;
+  }
+
+  body {
+    font-family: var(--font-orbitron);
+    background-color: #030308;
+    color: #ffffff;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+}
+
+.font-orbitron {
+  font-family: var(--font-orbitron);
+}
+
+.font-rajdhani {
+  font-family: var(--font-rajdhani);
+}
+
+.font-pixel {
+  font-family: var(--font-pixel);
+}
+
+/* Cyberpunk Neon Glow Effects */
+.neon-glow-cyan {
+  text-shadow: 0 0 5px #00f2ff, 0 0 15px #00f2ff, 0 0 30px #00f2ff;
+}
+
+.neon-glow-pink {
+  text-shadow: 0 0 5px #ff00ff, 0 0 15px #ff00ff, 0 0 30px #ff00ff;
+}
+
+.neon-glow-purple {
+  text-shadow: 0 0 5px #bc13fe, 0 0 15px #bc13fe, 0 0 30px #bc13fe;
+}
+
+.neon-border-cyan {
+  border-color: #00f2ff;
+  box-shadow: 0 0 10px rgba(0, 242, 255, 0.5), inset 0 0 10px rgba(0, 242, 255, 0.3);
+}
+
+.neon-border-pink {
+  border-color: #ff00ff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5), inset 0 0 10px rgba(255, 0, 255, 0.3);
+}
+
+.neon-box-cyan {
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.6), 0 0 30px rgba(0, 242, 255, 0.2);
+}
+
+.neon-box-pink {
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.6), 0 0 30px rgba(255, 0, 255, 0.2);
+}
+
+.neon-btn-cyan {
+  background: rgba(0, 242, 255, 0.08);
+  border: 1px solid #00f2ff;
+  color: #00f2ff;
+  text-shadow: 0 0 8px #00f2ff;
+  box-shadow: 0 0 12px rgba(0, 242, 255, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.neon-btn-cyan:hover {
+  background: #00f2ff;
+  color: #000;
+  text-shadow: none;
+  box-shadow: 0 0 25px #00f2ff, 0 0 40px rgba(0, 242, 255, 0.8);
+  transform: translateY(-2px) scale(1.02);
+}
+
+.neon-btn-pink {
+  background: rgba(255, 0, 255, 0.08);
+  border: 1px solid #ff00ff;
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff;
+  box-shadow: 0 0 12px rgba(255, 0, 255, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.neon-btn-pink:hover {
+  background: #ff00ff;
+  color: #000;
+  text-shadow: none;
+  box-shadow: 0 0 25px #ff00ff, 0 0 40px rgba(255, 0, 255, 0.8);
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Cyberpunk Glassmorphism */
+.cyber-glass {
+  background: rgba(10, 10, 25, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 242, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+.cyber-panel {
+  background: linear-gradient(135deg, rgba(20, 10, 35, 0.85) 0%, rgba(5, 5, 15, 0.95) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(188, 19, 254, 0.3);
+  clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+}
+
+/* CRT Scanlines Overlay */
+.crt-overlay {
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%),
+              linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+}
+
+/* Vignette */
+.cyber-vignette {
+  background: radial-gradient(circle at center, transparent 50%, rgba(2, 2, 8, 0.85) 100%);
+  pointer-events: none;
+}
+
+/* Glitch Animation */
+@keyframes glitch {
+  0% { transform: translate(0) }
+  20% { transform: translate(-2px, 2px) }
+  40% { transform: translate(-2px, -2px) }
+  60% { transform: translate(2px, 2px) }
+  80% { transform: translate(2px, -2px) }
+  100% { transform: translate(0) }
+}
+
+.animate-glitch {
+  animation: glitch 0.3s ease infinite alternate;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090915;
+}
+::-webkit-scrollbar-thumb {
+  background: #00f2ff;
+  border-radius: 3px;
+  box-shadow: 0 0 10px #00f2ff;
+}
+
